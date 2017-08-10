@@ -47,11 +47,9 @@ To trigger leader election, we must join these machines together and create a cl
   [start_join](https://www.consul.io/docs/agent/options.html#start_join)
   options
 - Manually specified list of machines with [-retry-join](https://www.consul.io/docs/agent/options.html#_retry_join) option
-- Automatic AWS EC2 instance joining with the [-retry-join-ec2-*](https://www.consul.io/docs/agent/options.html#_retry_join_ec2_tag_key) options
-- Automatic GCE instance joining with the [-retry-join-gce-*](https://www.consul.io/docs/agent/options.html#_retry_join_gce_tag_value) options
-- Automatic Azure instance joining with the [-retry-join-azure-*](https://www.consul.io/docs/agent/options.html#_retry_join_azure_tag_name) options
+- Automatic Cloud Provider instance joining with the [-retry-join 'provider' parameter](https://www.consul.io/docs/agent/options.html#cloud-auto-joining) options
 
-Choose the method which best suits your environment and specific use case.
+Currently the providers AWS, Azure, GCE and SoftLayer are supported. 
 
 ~> **Notice:** The hosted version of Consul Enterprise was deprecated on
   March 7th, 2017 and the Atlas `auto-join` feature is no longer available. For details, see https://atlas.hashicorp.com/help/consul/alternatives.
